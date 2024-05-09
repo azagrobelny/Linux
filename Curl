@@ -1,0 +1,12 @@
+Przełączniki:
+######################
+-I powoduje, że curl wysyła metodę http HEAD, która zwraca tylko nagłówki w odpowiedzi, bez body strony (łatwiej porównać odpowiedzi, niż przy metodach GET lub POST).
+-L powoduje, że w razie otrzymania odpowiedzi przekierowującej np. 301, 302, 307, curl podąży za przekierowaniem i wykona kolejne zapytanie na przekierowany zasób.
+-k (lub --insecure) powoduje, że curl nie weryfikuje certyfikatu (przydatne przy testach)ed-v tryb verbose powoduje, że curl wyświetla cały handshake TLS (tyko na linuksach) oraz odpowiedź zawiera więcej szczegółów.
+
+Telnet za pomocą Curl'a
+#######################
+curl -v telnet://172.16.200.16:443 
+* Rebuilt URL to: telnet://172.16.200.16:443/
+*   Trying 172.16.200.16...
+* Connected to 172.16.200.16 (172.16.200.16) port 443 (#0)
